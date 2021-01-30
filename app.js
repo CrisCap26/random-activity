@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
     res.end('Hola Mundo');
 });
 
-const puerto = 3000;
+const puerto = process.env.PORT || 3000;
 server.listen(puerto, () => {
     console.log('Escuchando solicitudes');
 });
