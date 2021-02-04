@@ -173,7 +173,7 @@ body.dark-mode input.style-input {
 
 body.dark-mode textarea {
     background: #3b4353;
-    
+    color: white;
 }
 
 .style-input::placeholder {
