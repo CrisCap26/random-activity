@@ -39,18 +39,18 @@
     
     <div id="box" class="box-style" >
         <h4>&#127936; Suggest an Activity</h4>
-        <form id="form">
+        <form id="form" method="POST" action="/form">
             <div class="labels">
                 <label>Email (We won't spam you)</label>
                 <input id="in-0" class="style-input" type="email" name="email" placeholder="Enter your email address">
             </div>
            <div class="labels">
                 <label>Title</label>
-                <input id="in-1" class="style-input" type="text" name="title" placeholder="Enter the title of the activity">
+                <input id="in-1" class="style-input" type="text" name="titulo" placeholder="Enter the title of the activity">
            </div>
            <div class="labels">
                 <label>Description</label>
-                <textarea id="in-2" class="style-input" cols="30" rows="7" placeholder="Enter the description for the activity"></textarea>
+                <textarea id="in-2" class="style-input" name="descripcion" cols="30" rows="7" placeholder="Enter the description for the activity"></textarea>
            </div>
            <button id="btn">Submit</button>
         </form>
