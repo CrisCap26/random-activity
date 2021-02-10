@@ -4,14 +4,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//const { Pool } = require('pg');
-/*const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'formapp', 
-    password: '',
-    port: '5432'
-});*/
+
 
 const puerto = process.env.PORT || 3000;
 

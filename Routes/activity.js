@@ -20,11 +20,16 @@ router.post('/form', (req, res) => {
     let myData = new Activity(req.body);
     myData.save()
     .then(item => {
-        res.send('Datos guardados');
+        res.redirect('http://localhost:3000/formulario.html');
     })
     .catch(err => {
         res.status(400).send('Error');
     });
+});
+
+router.get('/actividades', (req, res) => {
+    res.render('actividad', {titulo: 'Jugar',
+    descripcion: 'Salir a jugar xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'})
 });
 
 module.exports = router;

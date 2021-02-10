@@ -18,8 +18,18 @@ h1 {
     font-size: 20px;
     font-family: sans-serif;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 215px;
     font-weight: normal;
+}
+
+#titulo {
+    margin-top: 160px;
+    font-size: 20px;
+}
+
+#descripcion {
+    text-align: center;
+    font-family: sans-serif;
 }
 
 #menu {
