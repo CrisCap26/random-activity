@@ -1,4 +1,5 @@
 const express = require('express');
+const { db } = require('../Models/activity');
 const router = express.Router();
 
 const Activity = require('../Models/activity');
@@ -27,9 +28,22 @@ router.post('/form', (req, res) => {
     });
 });
 
-router.get('/actividades', (req, res) => {
-    res.render('actividad', {titulo: 'Jugar',
-    descripcion: 'Salir a jugar xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'})
+router.get('/actividades', async (req, res) => {
+    try {
+
+        let numRandom = 3;
+        const arrayActivities = await Activity.find().limit(1).skip(numRandom);
+
+        console.log(arrayActivities);
+        res.render('actividad', {
+            titulo: arrayActivities[0]['titulo'],
+            descripcion: arrayActivities[0]['descripcion']
+           
+        })
+    } catch (error) {
+        console.log(error);
+    }
+  
 });
 
 module.exports = router;
