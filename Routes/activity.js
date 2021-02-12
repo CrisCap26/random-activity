@@ -31,7 +31,7 @@ router.post('/form', (req, res) => {
 
 
 
-        router.get('/actividades', async (req, res) => {
+        router.get('/actividad.html', async (req, res) => {
             try {
                 
                 
