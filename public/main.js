@@ -57,7 +57,7 @@ if(localStorage.getItem('modo-dark') === 'true'){
     btnLight.classList.remove('encendido');
 }
 
-//Guardar datos del form en localStorage
+/*Guardar datos del form en localStorage
 const btn_form = document.querySelector('#btn');
 
 btn_form.addEventListener('click', () => {
@@ -68,9 +68,10 @@ btn_form.addEventListener('click', () => {
     localStorage.setItem('email', email_form);
     localStorage.setItem('title', title);
     localStorage.setItem('description', description);
-});
+});*/
 
 //Mostrar los datos
+/*
 const regenerate = document.getElementById('refresh');
 
 regenerate.addEventListener('click', () => {
@@ -78,4 +79,15 @@ regenerate.addEventListener('click', () => {
     let descr = localStorage.getItem('description');
 
     document.getElementById('titulo').style.display = 'none';
-});
+});*/
+
+function pressSpace() {
+    
+    let tecla_space = event.keyCode;
+    if(tecla_space == 32){
+        console.log('tecla presionada');
+        
+    }
+}
+
+

@@ -28,22 +28,34 @@ router.post('/form', (req, res) => {
     });
 });
 
-router.get('/actividades', async (req, res) => {
-    try {
 
-        let numRandom = 3;
-        const arrayActivities = await Activity.find().limit(1).skip(numRandom);
 
-        console.log(arrayActivities);
-        res.render('actividad', {
-            titulo: arrayActivities[0]['titulo'],
-            descripcion: arrayActivities[0]['descripcion']
-           
-        })
-    } catch (error) {
-        console.log(error);
-    }
-  
-});
+
+function mostrarDatos(){
+        router.get('/actividades', async (req, res) => {
+            try {
+                
+                let i=-1;
+              /*  if(i < arrayActivities.length){
+                    i++;
+                } else {
+                    i=0;
+                }*/
+                //const arrayActivities = await Activity.find().limit(-1).skip(5 * Activity.count());
+                const arrayActivities = await Activity.find();
+                console.log(arrayActivities);
+        
+                res.render('actividad', {
+                    titulo: arrayActivities[0]['titulo'],
+                    descripcion: arrayActivities[0]['descripcion']
+                });
+            } catch (error) {
+                console.log(error);
+            }
+          
+        });
+}
+
 
 module.exports = router;
+module.exports = mostrarDatos;
