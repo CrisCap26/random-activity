@@ -4,17 +4,18 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+require('dotenv').config();
 
 const puerto = process.env.PORT || 3000;
 
 //Conexión a base de datos
 const mongoose = require('mongoose');
-
+/*
 const user = 'Admin';
 const password = '2vPXyWv49Ivs6ke2';
 const dbname = 'Registro';
-const uri = `mongodb+srv://${user}:${password}@cluster0.x7dcl.mongodb.net/${dbname}?retryWrites=true&w=majority`;
+*/
+const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.x7dcl.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 
