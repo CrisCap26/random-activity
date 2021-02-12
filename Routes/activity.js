@@ -31,7 +31,6 @@ router.post('/form', (req, res) => {
 
 
 
-function mostrarDatos(){
         router.get('/actividades', async (req, res) => {
             try {
                 
@@ -41,21 +40,22 @@ function mostrarDatos(){
                 } else {
                     i=0;
                 }*/
-                //const arrayActivities = await Activity.find().limit(-1).skip(5 * Activity.count());
+                
+                //const arrayActivities = await Activity.find().limit(1).skip(Math.floor(Math.random()) * Activity.count());
                 const arrayActivities = await Activity.find();
+                let num_random = Math.floor(Math.random() * (arrayActivities.length));
                 console.log(arrayActivities);
-        
+                console.log(num_random);
                 res.render('actividad', {
-                    titulo: arrayActivities[0]['titulo'],
-                    descripcion: arrayActivities[0]['descripcion']
+                    titulo: arrayActivities[num_random]['titulo'],
+                    descripcion: arrayActivities[num_random]['descripcion']
                 });
             } catch (error) {
                 console.log(error);
             }
           
         });
-}
+
 
 
 module.exports = router;
-module.exports = mostrarDatos;

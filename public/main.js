@@ -57,36 +57,14 @@ if(localStorage.getItem('modo-dark') === 'true'){
     btnLight.classList.remove('encendido');
 }
 
-/*Guardar datos del form en localStorage
-const btn_form = document.querySelector('#btn');
-
-btn_form.addEventListener('click', () => {
-    let email_form = document.getElementById('in-0').value;
-    let title = document.getElementById('in-1').value;
-    let description = document.getElementById('in-2').value;
-
-    localStorage.setItem('email', email_form);
-    localStorage.setItem('title', title);
-    localStorage.setItem('description', description);
-});*/
-
-//Mostrar los datos
-/*
-const regenerate = document.getElementById('refresh');
-
-regenerate.addEventListener('click', () => {
-    let titulo = localStorage.getItem('title');
-    let descr = localStorage.getItem('description');
-
-    document.getElementById('titulo').style.display = 'none';
-});*/
+//Mostrar Datos
 
 function pressSpace() {
     
     let tecla_space = event.keyCode;
     if(tecla_space == 32){
         console.log('tecla presionada');
-        
+        window.location.href = "http://localhost:3000/actividades"
     }
 }
 
