@@ -18,8 +18,18 @@ h1 {
     font-size: 20px;
     font-family: sans-serif;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 215px;
     font-weight: normal;
+}
+
+#titulo {
+    margin-top: 160px;
+    font-size: 20px;
+}
+
+#descripcion {
+    text-align: center;
+    font-family: sans-serif;
 }
 
 #menu {
@@ -248,7 +258,7 @@ body.dark-mode textarea::placeholder {
         padding-left: 0px;
         border-top: solid 2px black;
         /*border-bottom: solid 2px black;*/
-        background-color: white;
+        background-color: #f1ecec;
         z-index: 100;
         margin-left: -10px;
         padding-bottom: 2px;
