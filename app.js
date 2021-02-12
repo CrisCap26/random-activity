@@ -2,14 +2,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+require('dotenv').config()
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require('dotenv').config();
 
-const { Pool } = require('pg');
-new Pool({
-    
-})
+
 
 //middlewares
 app.use(express.json());
@@ -35,27 +32,11 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.use(express.static(__dirname + '/public'));
-<<<<<<< HEAD
-app.post('/mostrar', (req, res) => {
-    
-})
-/*app.get('public/index', (req, res) => {
-=======
+
 //Rutas web
 app.use('/', require('./Routes/routes'));
 app.use('/', require('./Routes/activity'));
-/*app.get('/index', (req, res) => {
->>>>>>> rama-fusion
-    res.render('index.html');
-});*/
 
-<<<<<<< HEAD
-app.get('public/formulario', (req, res) => {
-=======
-/*app.get('/formulario', (req, res) => {
->>>>>>> rama-fusion
-    res.render('formulario.html');
-});*/
 
 app.listen(puerto, () => {
     console.log('Servidor a su servicio');

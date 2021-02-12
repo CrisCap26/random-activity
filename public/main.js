@@ -65,6 +65,7 @@ function pressSpace() {
     if(tecla_space == 32){
         console.log('tecla presionada');
         window.location.href = "https://random-activity.herokuapp.com/actividades"
+        
     }
 }
 
