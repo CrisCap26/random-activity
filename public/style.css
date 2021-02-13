@@ -391,14 +391,19 @@ body.dark-mode textarea::placeholder {
     }
 
    /*Home*/
-   h1 {
+   #titulo {
     font-size: 22px;
     font-family: sans-serif;
     text-align: center;
     margin-top: 71px;
     font-weight: normal;
     width: 248px;
-    margin: 177px auto 0px auto;
+    margin: 146px auto 0px auto;
+    }
+
+    #tocar {
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
 }
 

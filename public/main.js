@@ -74,7 +74,7 @@ btnRefresh.addEventListener('click', () => {
     window.location.href = "/actividades";
 });
 
-const titulo = document.getElementById('titulo');
-titulo.addEventListener('click', () => {
+const tocar = document.getElementById('tocar');
+tocar.addEventListener('click', () => {
     window.location.href = "/actividades";
 });
