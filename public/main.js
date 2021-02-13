@@ -59,27 +59,22 @@ if(localStorage.getItem('modo-dark') === 'true'){
 }
 
 //Mostrar Datos
-/*const {datos} = require('../Routes/activity');
-import datos from '../Routes/activity'
-const titulo = document.getElementById('titulo');
-const descr = document.getElementById('descripcion');*/
 
 function pressSpace() {
     
     let tecla_space = event.keyCode;
     if(tecla_space == 32){
         console.log('tecla presionada');
-        //module.exports = {datos};   
-        //window.location.href = "https://random-activity.herokuapp.com/actividades"
-        window.location.href = "/actividades";
-       
-        
-       //titulo.innerHTML = datos.titulo;
-       //descr.innerHTML = datos.descripcion;
+        window.location.href = "/actividades";   
     }
 }
 
 const btnRefresh = document.querySelector('#refresh');
 btnRefresh.addEventListener('click', () => {
+    window.location.href = "/actividades";
+});
+
+const titulo = document.getElementById('titulo');
+titulo.addEventListener('click', () => {
     window.location.href = "/actividades";
 });
